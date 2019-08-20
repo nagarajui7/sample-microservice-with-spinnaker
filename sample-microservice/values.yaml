@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: nagarajubatchu1/sample-ms
+  tag: latest
   pullPolicy: IfNotPresent
 
 nameOverride: ""
@@ -16,14 +16,6 @@ service:
   type: NodePort
   port: 80
 
-ingress:
-  enabled: false
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  path: /
-  hosts:
-    - chart-example.local
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
